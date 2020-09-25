@@ -21,7 +21,7 @@ function primeNumber(n) {
 
 function primeNumRange(n) {
 
-    let mrNum = n - (n - 1);
+    let mrNum = n - (n - 2);
     let arrNum = [];
     document.write(`Вычисляем все простые числа в промежутке от 0 до ${n} : <br \/><br \/>`);
     while (n >= mrNum) {
@@ -39,38 +39,38 @@ primeNumRange(mrRandom());
 
 const basketGoods = [{
         "title": "Шлепанцы",
-        "cost": 300,
-        "count": 1
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Трусы",
-        "cost": 500,
-        "count": 3
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Галстук",
-        "cost": 750,
-        "count": 2
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Носки",
-        "cost": 250,
-        "count": 2
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Подтяжки",
-        "cost": 150,
-        "count": 2
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Очки",
-        "cost": 300,
-        "count": 1
+        "cost": mrRandom(),
+        "count": mrRandom()
     },
     {
         "title": "Ремень",
-        "cost": 400,
-        "count": 1
+        "cost": mrRandom(),
+        "count": mrRandom()
     }
 ]
 
@@ -84,10 +84,20 @@ function countBasketPrice(items) {
         sum += item.cost * item.count;
         count += item.count;
     }
-    document.write(`Кол-во товара в корзине ${count} шт.<br \/>Сумма заказа ${sum} руб.`)
+    document.write(`Кол-во товара в корзине ${count} шт.<br \/>Сумма заказа ${sum} руб.`);
     return sum;
 }
 
 countBasketPrice(basketGoods);
 
 // TODOO Третья задачка
+
+for (let i = 0; i <= 10; console.log(" - " + i + " - "), i++) {
+
+}
+
+// TODOO Четвертая задачка
+
+for (let i = 0, str = ""; i <= 20; console.log(str), str += "X", i++) {
+
+}
