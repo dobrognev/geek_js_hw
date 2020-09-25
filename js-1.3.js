@@ -23,7 +23,7 @@ function primeNumRange(n) {
 
     let mrNum = n - (n - 1);
     let arrNum = [];
-    document.write(`Вычисляем все простые числа в промежутке от 0 до ${n} : <br \/>`);
+    document.write(`Вычисляем все простые числа в промежутке от 0 до ${n} : <br \/><br \/>`);
     while (n >= mrNum) {
         if (primeNumber(mrNum) == true) {
             console.log(`Число ${mrNum} - простое`);
@@ -37,53 +37,54 @@ primeNumRange(mrRandom());
 
 // TODOO Вторая задачка
 
-let basketGoods = [{
-        "product": "Шлепанцы",
-        "coast": "300",
+const basketGoods = [{
+        "title": "Шлепанцы",
+        "coast": 300,
         "count": 1
     },
     {
-        "product": "Трусы",
-        "coast": "500",
+        "title": "Трусы",
+        "coast": 500,
         "count": 3
     },
     {
-        "product": "Галстук",
-        "coast": "750",
+        "title": "Галстук",
+        "coast": 750,
         "count": 2
     },
     {
-        "product": "Носки",
-        "coast": "250",
+        "title": "Носки",
+        "coast": 250,
         "count": 2
     },
     {
-        "product": "Подтяжки",
-        "coast": "150",
+        "title": "Подтяжки",
+        "coast": 150,
         "count": 2
     },
     {
-        "product": "Очки",
-        "coast": "300",
+        "title": "Очки",
+        "coast": 300,
         "count": 1
     },
     {
-        "product": "Ремень",
-        "coast": "400",
+        "title": "Ремень",
+        "coast": 400,
         "count": 1
     }
 ]
 
-function countBasketPrice(product) {
-    document.write(`<br \/>Считаем сумму покупок вашего заказа<br \/>`);
-    let sum = 0;
-    let count = 0;
-    for (let k of basket) {
-        sum += (product.coast * product.count)
-        count += product.count;
+function countBasketPrice(basket) {
+    document.write(`<br \/><br \/>Считаем сумму покупок вашего заказа<br \/>`);
+    console.log(basket);
+    var sum = 0;
+    var count = 0;
+    for (var k of basket) {
+        sum = sum + basket.coast * basket.count;
+        count = count + basket.count;
     }
-    document.write(`Кол-во товара в корзине ${count} шт.`, `Сумма заказа ${sum} руб<br \/>.`)
-    return sum
+    document.write(`Кол-во товара в корзине ${count} шт.<br \/>Сумма заказа ${sum} руб.`)
+    return sum;
 }
 
 countBasketPrice(basketGoods);
