@@ -1,0 +1,89 @@
+// Что-то я увлекся немного
+// TODOO Первая задачка
+function mrRandom() {
+    return parseInt(Math.round(Math.random() * 500))
+}
+
+function primeNumber(n) {
+    if (n < 1) {
+        console.log(`Число должно быть больше единиы`)
+    }
+    let numRoot = Math.ceil(Math.sqrt(n));
+    while (numRoot > 1) {
+        if (n % numRoot === 0) {
+            return false
+        }
+        numRoot--;
+    }
+    return true;
+}
+// primeNumber(mrRandom());
+
+function primeNumRange(n) {
+
+    let mrNum = n - (n - 1);
+    let arrNum = [];
+    document.write(`Вычисляем все простые числа в промежутке от 0 до ${n} : <br \/>`);
+    while (n >= mrNum) {
+        if (primeNumber(mrNum) == true) {
+            console.log(`Число ${mrNum} - простое`);
+            arrNum.push('  ' + mrNum + '  ');
+        }
+        mrNum++;
+    }
+    document.write(arrNum);
+}
+primeNumRange(mrRandom());
+
+// TODOO Вторая задачка
+
+let basketGoods = [{
+        "product": "Шлепанцы",
+        "coast": "300",
+        "count": 1
+    },
+    {
+        "product": "Трусы",
+        "coast": "500",
+        "count": 3
+    },
+    {
+        "product": "Галстук",
+        "coast": "750",
+        "count": 2
+    },
+    {
+        "product": "Носки",
+        "coast": "250",
+        "count": 2
+    },
+    {
+        "product": "Подтяжки",
+        "coast": "150",
+        "count": 2
+    },
+    {
+        "product": "Очки",
+        "coast": "300",
+        "count": 1
+    },
+    {
+        "product": "Ремень",
+        "coast": "400",
+        "count": 1
+    }
+]
+
+function countBasketPrice(product) {
+    document.write(`<br \/>Считаем сумму покупок вашего заказа<br \/>`);
+    let sum = 0;
+    let count = 0;
+    for (let k of basket) {
+        sum += (product.coast * product.count)
+        count += product.count;
+    }
+    document.write(`Кол-во товара в корзине ${count} шт.`, `Сумма заказа ${sum} руб<br \/>.`)
+    return sum
+}
+
+countBasketPrice(basketGoods);
