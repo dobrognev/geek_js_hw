@@ -39,52 +39,55 @@ primeNumRange(mrRandom());
 
 const basketGoods = [{
         "title": "Шлепанцы",
-        "coast": 300,
+        "cost": 300,
         "count": 1
     },
     {
         "title": "Трусы",
-        "coast": 500,
+        "cost": 500,
         "count": 3
     },
     {
         "title": "Галстук",
-        "coast": 750,
+        "cost": 750,
         "count": 2
     },
     {
         "title": "Носки",
-        "coast": 250,
+        "cost": 250,
         "count": 2
     },
     {
         "title": "Подтяжки",
-        "coast": 150,
+        "cost": 150,
         "count": 2
     },
     {
         "title": "Очки",
-        "coast": 300,
+        "cost": 300,
         "count": 1
     },
     {
         "title": "Ремень",
-        "coast": 400,
+        "cost": 400,
         "count": 1
     }
 ]
 
-function countBasketPrice(basket) {
-    document.write(`<br \/><br \/>Считаем сумму покупок вашего заказа<br \/>`);
-    console.log(basket);
-    var sum = 0;
-    var count = 0;
-    for (var k of basket) {
-        sum = sum + basket.coast * basket.count;
-        count = count + basket.count;
+function countBasketPrice(items) {
+
+    document.write(`<br \/><br \/>Считаем сумму покупок вашего заказа<br \/>`);;
+    let sum = 0;
+    let count = 0;
+
+    for (let item of items) {
+        sum += item.cost * item.count;
+        count += item.count;
     }
     document.write(`Кол-во товара в корзине ${count} шт.<br \/>Сумма заказа ${sum} руб.`)
     return sum;
 }
 
 countBasketPrice(basketGoods);
+
+// TODOO Третья задачка
