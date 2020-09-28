@@ -90,9 +90,9 @@ function countBasketPrice(items) {
 
 countBasketPrice(basketGoods);
 
-// TODOO Третья задачка
+// TODOO Третья задачкаё
 
-for (let i = 0; i <= 10; console.log(" - " + i + " - "), i++) {
+for (let i = 0; i <= 10; console.log(" - " + i++ + " - ")) {
 
 }
 
