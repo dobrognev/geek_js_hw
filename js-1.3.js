@@ -1,7 +1,7 @@
 // Что-то я увлекся немного
 // TODOO Первая задачка
 function mrRandom() {
-    return parseInt(Math.round(Math.random() * 500))
+    return Math.round(Math.random() * 500)
 }
 
 function primeNumber(n) {
