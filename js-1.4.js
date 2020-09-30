@@ -1,7 +1,7 @@
 // Что-то я увлекся немного
 // TODOO Первая задачка
 function mrNum_999() {
-    return Math.round(Math.random() * 998)
+    return Math.round(Math.random() * 999)
 }
 
 let numberBox = {}
@@ -32,4 +32,7 @@ console.log(numberBox);
 
 // TODOO Вторая задачка
 
+// Там на уроке все показано было - не стал делать.
+
 // TODOO Третья задачка
+//! Кто хочет стать миллионером
